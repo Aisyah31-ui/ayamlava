@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Ayam Lava</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+    }
+    .left-panel, .right-panel {
+      width: 50%;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+    .left-panel {
+      background: linear-gradient(to bottom right, #5e0b15, #ff6f00);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .left-panel h1 {
+      font-size: 2em;
+    }
+    .form-group {
+      margin: 20px 0;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    .btn {
+      background-color: #e91e63;
+      color: white;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .right-panel {
+      background: linear-gradient(to bottom right, #ffa726, #ff7043);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+    }
+    .right-panel img {
+      max-width: 250px;
+      margin-bottom: 20px;
+    }
+    .brand-name {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .tagline {
+      font-size: 1em;
+      margin-top: 10px;
+    }
+    #response {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: rgba(0,0,0,0.3);
+      color: yellow;
+      font-weight: bold;
+    }
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+        height: auto;
+      }
+      .left-panel, .right-panel {
+        width: 100%;
+        padding: 30px 20px;
+      }
+      .right-panel {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="left-panel">
+    <h1>Selamat Datang di Ayam Lava</h1>
+    <div class="form-group">
+      <label for="username">Username</label><br>
+      <input type="text" id="username" placeholder="Masukkan username">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label><br>
+      <input type="password" id="password" placeholder="Masukkan password">
+    </div>
+    <button id="btnLogin" class="btn">Login</button>
+    <div id="response"></div>
+    <p>Belum punya akun? <a href="daftar.html" style="color: #fff; text-decoration: underline;">Daftar di sini</a></p>
+  </div>
+
+  <div class="right-panel">
+    <img src="gadabg.png" alt="Ayam Lava">
+    <div class="brand-name">AYAM LAVA</div>
+    <div class="tagline">Rasa Pedasnya Meledak!</div>
+  </div>
+
+  <script>
+    $('#btnLogin').click(function () {
+      const username = $('#username').val().trim();
+      const password = $('#password').val().trim();
+      const $response = $('#response');
+
+      if (!username || !password) {
+        $response.html('? Username dan Password wajib diisi!');
+        return;
+      }
+
+      $.ajax({
+        url: 'login.php',  // Your backend PHP login script
+        method: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({ username: username, password: password }),
+        success: function (res) {
+          if (res.success) {
+            window.location.href = "home.html";  // Redirect to home if login is successful
+          } else {
+            if (res.message === "User not found" || res.message === "Invalid credentials") {
+              $response.html('? Akun tidak ditemukan atau password salah. <br><a href="daftar.html" style="color: #ffd700;">Klik di sini untuk mendaftar</a>');
+            } else {
+              $response.html('? ' + res.message);
+            }
+          }
+        },
+        error: function (xhr) {
+          $response.html('? Gagal menghubungi server.');
+          console.error("AJAX ERROR:", xhr.responseText);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

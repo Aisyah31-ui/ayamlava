@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Daftar Akun - Ayam Lava</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f44336;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 60px;
+    }
+    form {
+      background: #fff;
+      color: #333;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      width: 300px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #e91e63;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #message {
+      margin-top: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="formDaftar">
+    <h2>Daftar Akun</h2>
+    <input type="text" id="username" placeholder="Username" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button type="submit">Daftar</button>
+    <div id="message"></div>
+  </form>
+
+  <script>
+    document.getElementById('formDaftar').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const message = document.getElementById('message');
+
+      fetch('daftar.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          message.innerHTML = "✅ Berhasil daftar. <a href='login.html'>Login sekarang</a>";
+        } else {
+          message.innerHTML = "❌ " + data.message;
+        }
+      })
+      .catch(err => {
+        console.error(err);
+        message.innerHTML = "❌ Gagal menghubungi server.";
+      });
+    });
+  </script>
+</body>
+</html>

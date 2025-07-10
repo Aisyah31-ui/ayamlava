@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Ayam Lava</title>
+</head>
+<body style="text-align:center; margin-top:100px;">
+  <h1>✅ Selamat datang di Ayam Lava!</h1>
+  <p>Kamu berhasil login.</p>
+</body>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #ff9800, #ff5722);
+      color: white;
+    }
+
+    nav {
+      background: #b71c1c;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .menu-section {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .menu-title {
+      font-size: 3em;
+      margin-bottom: 20px;
+      font-family: 'Pacifico', cursive;
+    }
+
+    .menu-items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .menu-card {
+      background: white;
+      color: black;
+      border-radius: 15px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .menu-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #fff;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    @media (max-width: 768px) {
+      .menu-items {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Ayam Lava</div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="maps.html">store</a></li>
+      <li><a href="">Menu</a></li>
+    </ul>
+  </nav>
+
+  <section class="menu-section">
+    <div class="menu-title">Menu</div>
+    <div class="menu-items">
+      <div class="menu-card">
+        <img src="111111.jpg" alt="Paket 01">
+        <h3>PAKET 01</h3>
+        <p>Ayam KFC + Nasi + Es Teh</p>
+      </div>
+      <div class="menu-card">
+        <img src="utuhan.png" alt="Paket 02">
+        <h3>PAKET 02</h3>
+        <p>Ayam Lava Utuh</p>
+      </div>
+      <div class="menu-card">
+        <img src="2222222.jpg" alt="Paket 03">
+        <h3>PAKET 03</h3>
+        <p>Ayam Pedas Lava + Nasi + Es Teh</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <p>Follow us: 
+      <a href="#">Instagram</a> | 
+      <a href="#">WhatsApp</a>
+    </p>
+  </div>
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delivery Website</title>
+
+  <!-- ✅ Font Awesome CDN for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-jQBU0ZH3hfpe5cn2QEY6K2IfvxI7UUlJ+uXmI0X9bHNOhY4PeNrcbTJfhyGP+Nfcy0PAK9YAK58CJkqFbslQzA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #b30000, #ff9900);
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 20px;
+    }
+
+    nav .active,
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .main-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80vh;
+      padding: 40px 20px;
+    }
+
+    .white-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      width: 100%;
+      background: white;
+      border-radius: 20px;
+      padding: 60px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .white-box .text {
+      max-width: 50%;
+      font-size: 2.8rem;
+      font-weight: bold;
+      line-height: 1.4;
+      color: #b30000;
+    }
+
+    .white-box .image img {
+      height: 400px;
+      max-width: 100%;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 15px;
+      font-size: 28px;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #25d366; /* WhatsApp green */
+    }
+
+    .social-icons a[aria-label="Instagram"]:hover {
+      color: #E1306C; /* Instagram pink */
+    }
+
+    @media (max-width: 768px) {
+      .white-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .white-box .text {
+        max-width: 100%;
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .white-box .image img {
+        height: 250px;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+  </header><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Spicy Chicken Delivery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom right, #e63312, #fba61d);
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .active {
+      background-color: #ffc107;
+      border-radius: 20px;
+      padding: 5px 15px;
+    }
+
+    .hero {
+      padding: 60px 20px;
+      text-align: left;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .hero h2 {
+      color: #ffca28;
+      font-size: 36px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: #ffd699;
+    }
+
+    .hero button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ff5722;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .features {
+      background-color: white;
+      color: black;
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-around;
+      padding: 30px 10px;
+      margin: 40px 20px;
+    }
+
+    .feature {
+      text-align: center;
+      width: 30%;
+    }
+
+    .feature h3 {
+      margin-bottom: 10px;
+      color: #e64a19;
+    }
+
+    .illustration {
+      position: absolute;
+      right: 30px;
+      top: 100px;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+    
+  </nav>
+
+  <div class="hero">
+    <h1> Kami siap mengantarkan pesananmu</h1>
+    <h2>Anytime</h2>
+
+  <!-- Main Section with White Box -->
+  <div class="main-section">
+    <div class="white-box">
+      <div class="text">
+       Delivery cepat, pedasnya<br />
+        nempel!<br />
+		Ayam Lava, solusi lapar<br />
+        tanpa ribet.
+      </div>
+      <div class="image">
+        <img src="removebgdel.png" alt="Delivery" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer with social icons -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://wa.me/6282336918116" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://instagram.com/ayamlavasergai" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </footer>
+
+</body>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Promo Makanan & Minuman</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #ff3c00, #ffa600);
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    .promo-container {
+      max-width: 500px;
+      margin: 50px auto;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    }
+    .promo-image {
+      width: 100%;
+      max-height: 250px;
+      object-fit: contain;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .promo-text {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .whatsapp-info {
+      display: inline-flex;
+      align-items: center;
+      background-color: #25D366;
+      padding: 10px 15px;
+      border-radius: 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .whatsapp-info:hover {
+      background-color: #1ebe5d;
+    }
+    .whatsapp-info svg {
+      margin-right: 8px;
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+  </style>
+</head>
+<body>
+
+<div class="promo-container">
+  <img src="23454.png" alt="Promo Makanan dan Minuman" class="promo-image">
+  <div class="promo-text">
+    Untuk info menu lainnya dan pesanan, silakan langsung hubungi nomor WhatsApp kami.
+  </div>
+  <a href="https://wa.me/6282336918116" class="whatsapp-info" target="_blank">
+    <!-- Logo WhatsApp SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+      <path d="M380.9 97.1C339-3.1 247.4-30.6 167.6 3.6 87.8 37.9 39.5 125.4 64.1 209.1L33.8 319.8c-3.5 12.6 8.6 23.9 21 20.5l113.6-30.4c80.2 41.8 180.3 9.1 222.1-71.1 29.3-56.3 20.8-127.7-29.7-173.7zM224 334c-61.6 0-111.7-50.1-111.7-111.7S162.4 110.7 224 110.7s111.7 50.1 111.7 111.7S285.6 334 224 334zm-35.3-111.7c0 9.3 7.6 16.9 16.9 16.9h35.3c9.3 0 16.9-7.6 16.9-16.9s-7.6-16.9-16.9-16.9h-35.3c-9.3 0-16.9 7.6-16.9 16.9z"/>
+    </svg>
+    Hubungi via WhatsApp
+  </a>
+</div>
+
+</body>
+</html>

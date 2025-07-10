@@ -1,0 +1,16 @@
+<form id="formWA">
+  <input type="text" id="nama" placeholder="Nama Anda" required>
+  <input type="text" id="alamat" placeholder="Alamat Pengantaran" required>
+  <button type="submit">Pesan via WhatsApp</button>
+</form>
+
+<script>
+document.getElementById('formWA').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const nama = document.getElementById('nama').value;
+  const alamat = document.getElementById('alamat').value;
+  const pesan = `Halo, saya ${nama}, mau pesan Ayam Lava ke alamat: ${alamat}`;
+  const url = "https://wa.me/6281234567890?text=" + encodeURIComponent(pesan);
+  window.location.href = url;
+});
+</script>

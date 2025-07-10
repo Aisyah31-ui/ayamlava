@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokasi Outlet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            background-color: #ff5722;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .info {
+            flex: 1 1 8%;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 5px;
+        }
+        .map {
+            flex: 1 1 30%;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="maps.html" class="active">Store</a></li>
+		  <li><a href="menu.html">Menu</a></li>
+      </nav>
+    </header>
+
+    <div class="header">
+        <h1>Lokasi Outlet</h1>
+        <p>Kami berada di alamat berikut:Jl. Negara 20911 Sei Rampah Sumatera Utara</p>
+    </div>
+
+    <div class="content">
+        <div class="info">
+            <p><strong>Nama Outlet:</strong> Ayam Lava Sergai</p>
+            <p><strong>Alamat:</strong> Jl. Negara 20911 Sei Rampah Sumatera Utara </p>
+            <p><strong>Telepon:</strong> (082336918116</p>
+            <p><strong>Jam Operasional:</strong> Senin - Minggu, 08:00 - 21:00</p>
+        </div>
+        <div class="map">
+            <h2>Peta Lokasi</h2>
+            <iframe 
+                src="https://www.google.com/maps?q=3.5005849,99.1225556&hl=id&z=15&output=embed" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+        </div>
+    </div>
+
+</body><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayam Lava Sergai</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #b60000, #ff8000);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background-color: #fff;
+      color: #b60000;
+      width: 80%;
+      max-width: 800px;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 10px;
+      font-size: 2.5rem;
+      color: #b60000;
+    }
+
+    img.logo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      display: block;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #b60000;
+      font-weight: bold;
+    }
+
+    nav ul li a.active {
+      text-decoration: underline;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .social-icons {
+      margin-top: 30px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: #b60000;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <ul>
+        
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="about_us">
+        <img src="gadabg.png" alt="Ayam Lava Sergai" class="logo" />
+        <h1>About Us</h1>
+        <p>
+          Ayam Lava Sergai adalah usaha kuliner lokal di Serdang Bedagai yang menyajikan 
+          ayam goreng dengan cita rasa pedas dan kaya rempah. Menggunakan bahan-bahan segar dan resep 
+          khas, Ayam Lava menawarkan pengalaman makan yang menggugah selera, cocok untuk pencinta makanan pedas
+          dan menjadi pilihan favorit di komunitas sekitar.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social-icons">
+        <a href="https://wa.me/6282336918116" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://instagram.com/ayamlavasergai" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+
+</html>
